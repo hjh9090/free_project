@@ -7,6 +7,12 @@ insert into free_member (id, name, email, gender, birth)
 values (#{id}, #{name}, #{email}, #{gender}, #{birth})
 </insert>
 
+<select id="getMember" parameterType="String" resultType="int">
+select * free_member
+where id = #{id}
+
+</select>
+
 </mapper>
 
 

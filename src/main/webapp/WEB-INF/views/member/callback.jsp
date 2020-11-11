@@ -6,22 +6,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>상담 커뮤니티</title>
+<meta charset="UTF-8">
+<title>잠시만 기다려 주십시오.</title>
 </head>
 <body>
-<h1>
-	상담 커뮤니티에 오신 것을 환영합니다
-</h1>
-<div id = "mainButton">
-<table>
-	<tr>
-		<td >로그인</td>
-		<td>회원 가입</td>
-		<td>상담 게시판으로 이동</td>
-	</tr>
-</table>
-</div>
-
 
 </body>
 </html>
