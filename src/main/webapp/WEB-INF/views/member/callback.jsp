@@ -18,14 +18,34 @@ window.onload = function()
 {
 	setTimeout(function(){ SendToken(); }, 2000);
 }
+
+
+
 function SendToken () {
-	var token = $('tetToken').value;
+	var token = $('#txtToken').val();
+	
 	console.log(token);
-	/* $.ajax ({
-		url : 
-		
-		}) */
+
+	$.ajax({
+		url : "sendtoken",
+		type : "GET",
+		data : {
+			access_token : token
+		},
+		success : function() {
+			alert("Success!");
+			init();
+		},
+		error : function (e){
+			alert(JSON.stringify(e));
+			}
+		});
 }
+
+function init() {
+	location.href = "../freework/";
+}
+
 </script>
 </head>
 <body>
@@ -66,13 +86,13 @@ String strTokenFull = "";
       br.close();
       if(responseCode==200) {
     	  strTokenFull = res.toString();
-//         out.println(res.toString());
-//         out.println(strTokenFull);
+         /* out.println(res.toString());
+         out.println(strTokenFull); */
         
         int itmp = strTokenFull.indexOf("refresh_token");
         access_token = strTokenFull.substring(17, itmp - 3);
-//         out.println("\n\n");
-//         out.println(access_token);
+/*          out.println("\n\n");
+         out.println(access_token); */
       }
     } catch (Exception e) {
       System.out.println(e);
