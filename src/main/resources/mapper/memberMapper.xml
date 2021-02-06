@@ -10,7 +10,6 @@ values (#{id}, #{name}, #{email}, #{gender}, #{birth})
 <select id="getMember" parameterType="String" resultType="int">
 select * from free_member
 where id = #{id}
-
 </select>
 
 </mapper>
